@@ -14,7 +14,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>501.6,662.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>740,2912</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_00_메일수신_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -121,7 +121,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="_00_메일수신" sap:VirtualizedContainerService.HintSize="512,597.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_00_메일수신" sap:VirtualizedContainerService.HintSize="750.4,2847.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="listMail" />
       <Variable x:TypeArguments="x:String" Name="str추출항목" />
@@ -131,7 +131,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;00_메일수신 시작&gt;&gt;&gt;&gt;&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="688,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;00_메일수신 시작&gt;&gt;&gt;&gt;&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -139,11 +139,11 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Sequence DisplayName="메일_작업지시서 가져오기 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,64.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="메일_작업지시서 가져오기 | Sequence" sap:VirtualizedContainerService.HintSize="688,1312.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="옵션 &gt; 필터식&#xA;&quot;FROM 'rpa.sj.jeong@gmail.com'&quot;&#xA;&quot;FROM ‘4sooha4@gmail.com’&quot;&#xA;&#xA;- IMAP 서버명 : map.gmail.com&#xA;- IMAP 포트 : 993&#xA;" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[in_strEmail]" EnableSSL="True" FilterExpression="FROM 'rpa.sj.jeong@gmail.com'" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="625.6,236.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[listMail]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Port="993" SecureConnection="Auto" SecurePassword="[in_sstrPW]" Server="imap.gmail.com" Top="50">
@@ -231,15 +231,15 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="최근 메일 50개 이내에 조건에 맞는 작업지시서가 없는 경우, 예외처리 " DisplayName="작업지시서 유무 확인 | Sequence" sap:VirtualizedContainerService.HintSize="449.6,96" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence sap2010:Annotation.AnnotationText="최근 메일 50개 이내에 조건에 맞는 작업지시서가 없는 경우, 예외처리 " DisplayName="작업지시서 유무 확인 | Sequence" sap:VirtualizedContainerService.HintSize="688,1097.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[String.IsNullOrEmpty(out_strMailBody)]" sap:VirtualizedContainerService.HintSize="529.6,905.6" sap2010:WorkflowViewState.IdRef="If_3">
+      <If Condition="[String.IsNullOrEmpty(out_strMailBody)]" sap:VirtualizedContainerService.HintSize="529.6,937.6" sap2010:WorkflowViewState.IdRef="If_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -258,7 +258,7 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,413.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,445.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -266,7 +266,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,130.4" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="작업지시서 있음 . . " />
-            <Assign sap2010:Annotation.AnnotationText="가져온 메일 중 작업지시서가 없어서 Throw 를 던지면, End Process 로가서, &#xA;if ( in_SystemException is Nothing and in_BusinessException is Nothing and in_int작업지시서 &gt; 0 ) 에서 &#xA;else 로 가서 [작업지시서 받지 못함 메일 발송]" sap:VirtualizedContainerService.HintSize="433.6,196.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap2010:Annotation.AnnotationText="가져온 메일 중 작업지시서가 없어서 Throw 를 던지면, End Process 로 가서, &#xA;if ( in_SystemException is Nothing and in_BusinessException is Nothing and out_int작업지시서 &gt; 0 ) 에서 &#xD;&#xA;&#xD;&#xA;Exception이 있고, out_int작업지시서가 0 이면&#xA;else 로 가서 [작업지시서 받지 못함 메일 발송]" sap:VirtualizedContainerService.HintSize="433.6,228.8" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[out_int작업지시서]</OutArgument>
               </Assign.To>
@@ -276,6 +276,8 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
@@ -283,7 +285,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;00_메일수신 종료&gt;&gt;&gt;&gt;&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="688,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;00_메일수신 종료&gt;&gt;&gt;&gt;&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
